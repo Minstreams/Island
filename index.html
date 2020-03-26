@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mins Island</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width,initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/island.css">
+    <script src="https://minstreams.com/JQuery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <iframe name="nullFrame" width="1px" height="1px" style="display: none;"></iframe>
+    <form target='nullFrame' action=''>
+        <input id='password' type='text' name='password'>
+        <input id='confirm' class='button' type='submit' value='确定'>
+    </form>
+    <script>
+        $('form').submit(function(){
+            console.log('asdasd');
+        });
+        $('#confirm').click(function () {
+            $.ajax({
+                url: 'check.php?password=' + $('#password').val(),
+                success: function (res) {
+                    document.write(res);
+                }
+            });
+        });
+    </script>
+</body>
