@@ -1,10 +1,48 @@
 html {
     background: gainsboro;
+    font-size: 4vw;
+    color: #382c3a;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+img {
+    user-select: none;
+}
+
+#password, .button, #footerDiv {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h1 {
+    background: #382c3a;
+    margin: 0;
+    color: gainsboro;
+    padding: 0.8em 0.4em;
+}
+
+h3 {
+    display: flex;
+    margin: 0;
+    padding: 0.2em;
+    border-bottom: 2px dashed;
+}
+
+#logout {
+    background: #382c3a;
+    color: gainsboro;
+    border: none;
+    font-family: sans-serif;
 }
 
 #password {
-    box-sizing: border-box;
-    width: 100%;
     height: 64px;
     background: gray;
     color: gainsboro;
@@ -13,22 +51,162 @@ html {
     border: 0.1em solid #9f90a0;
     border-radius: 0.5em;
     letter-spacing: 0.1em;
+    margin-bottom: 01em
 }
 
 .button {
-    display: block;
-    width: 100%;
     font-size: 2em;
     border-radius: 0.5em;
     padding: 0.2em;
-    background: #6f6f6f;
+    background: #807982;
     color: gainsboro;
 }
 
+timestamp {
+    text-align: center;
+    display: block;
+    color: #adaddc;
+    margin: 1em 0;
+    font-size: 0.8em;
+}
+
+chat, otherChat {
+    display: flex;
+    margin: 0.8em 0.5em;
+}
+
+chat {
+    flex-direction: row-reverse;
+}
+
+otherChat {}
+
+author {
+    min-width: 9vw;
+    max-width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+author>img {
+    width: 100%;
+    height: 100%;
+}
+
+messageBox {
+    display: block;
+    background: #d8d8d8;
+    border-radius: 0.3em;
+    border: 1px solid #716573;
+    padding: 0.3em;
+    margin: 0 0.4em;
+    height: fit-content;
+    transform: translateY(0.1em);
+}
+
+message {}
+
+#textDiv img {
+    max-width: 75vw;
+}
+
+isread {
+    color: #adaddc;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+#footerDiv {
+    display: flex;
+    flex-direction: column;
+    background: gainsboro;
+    position: fixed;
+    bottom: 0;
+}
+
+#inputFlex {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
 #inputDiv {
-    border-radius: 0.2em;
-    border: 2px solid;
+    border-radius: 0.5em;
+    border: 2px solid #8e8390;
     padding: 0.5em;
-    height: 5em;
+    height: fit-content;
     font-size: 1rem;
+    font-family: sans-serif;
+    background: none;
+    min-width: 69vw;
+    max-width: 69vw;
+    margin: 1vw;
+    outline: none;
+}
+
+.inputButton {
+    position: relative;
+    white-space: nowrap;
+    font-size: 4vw;
+    line-height: 8vw;
+    text-align: center;
+    height: fit-content;
+    border-radius: 0.5em;
+    background: #807982;
+    color: gainsboro;
+    text-align: center;
+    margin: 0 1vw;
+    margin-bottom: 2.4vw;
+}
+
+.inputButton:active {
+    background: #9a9595;
+}
+
+#publish {
+    min-width: 12vw;
+    max-width: 12vw;
+    transform: translateX(-0.5vw);
+}
+
+#emoji {
+    min-width: 8vw;
+    max-width: 8vw;
+}
+
+#emojiPool {
+    height: fit-content;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+#emojiPool::-webkit-scrollbar {
+    display: none;
+}
+
+#emojiPool>img, #uploadEmoji {
+    display: block;
+    width: 18vw;
+    height: 18vw;
+    margin: 1vw;
+    float: left;
+    border-radius: 2vw;
+}
+
+#uploadEmojiHide {
+    display: none;
+}
+
+#uploadEmoji {
+    background: #382c3a88;
+    border-radius: 50%;
+    font-size: 18vw;
+    line-height: 15vw;
+    color: gainsboro;
+    text-align: center;
+}
+
+#uploadEmoji:active {
+    background: #382c3a;
 }
